@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  main:
+    allow-circular-references: true
+
+kafka:
+  bootstrap-servers: localhost:9092     # localhost:9092,localhost:9093,localhost:9094
+  group-id: bizbee.kokoa.chat
+  topic: bizbee-chat-v1
+
+  # 기타 Kafka 관련 설정 (예: security, admin 등 필요 시 추가)
+  # 서버 인증서 설정 (예: SSL)
+  # spring.kafka.ssl.trust-store-location=classpath:truststore.jks
+  # spring.kafka.ssl.trust-store-password=your-password
+  # spring.kafka.ssl.key-store-location=classpath:keystore.jks
+  # spring.kafka.ssl.key-store-password=your-password
+  # spring.kafka.ssl.key-password=your-key-password
